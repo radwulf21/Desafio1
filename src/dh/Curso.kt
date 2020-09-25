@@ -1,6 +1,8 @@
 package dh
 
-class Curso(var nome: String, var codigo: Int) {
+class Curso(var nome: String, var codigo: Int, var professorTitular: ProfessorTitular, var professorAdjunto: ProfessorAdjunto, var qtdMaxAlunos: Int) {
+    val alunosMatriculados = mutableListOf<Aluno>()
+
     override fun equals(other: Any?): Boolean {
         return other == this.codigo
     }

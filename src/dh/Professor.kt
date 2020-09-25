@@ -1,6 +1,6 @@
 package dh
 
-class Professor(override var nome: String, override var sobrenome: String, var tempoDeCasa: Int, var codigo: Int) : Pessoa {
+abstract class Professor(override var nome: String, override var sobrenome: String, var tempoDeCasa: Int, var codigo: Int) : Pessoa {
     override fun equals(other: Any?): Boolean {
         return other == this.codigo
     }
