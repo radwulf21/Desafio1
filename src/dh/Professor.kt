@@ -6,6 +6,8 @@ abstract class Professor(override var nome: String, override var sobrenome: Stri
     }
 
     override fun toString(): String {
-        return "{nome: ${this.nome}, sobrenome: ${this.sobrenome}, tempoDeCasa: ${this.tempoDeCasa}, codigo: ${this.codigo}}"
+        return "${this.nome} ${this.sobrenome} " +
+                "com ${this.tempoDeCasa} anos de tempo de casa. " +
+                "Código: ${this.codigo}. "
     }
 }
