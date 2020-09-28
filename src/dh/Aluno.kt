@@ -6,6 +6,6 @@ class Aluno(override var nome: String, override var sobrenome: String, var codig
     }
 
     override fun toString(): String {
-        return "Nome: ${this.nome} ${this.sobrenome}, Código: ${this.codigo}"
+        return "{Nome: ${this.nome} ${this.sobrenome}, Código: ${this.codigo}}"
     }
 }

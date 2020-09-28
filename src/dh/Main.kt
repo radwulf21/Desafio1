@@ -1,11 +1,14 @@
 package dh
 
-fun main() {
-    val professorTitular1 = ProfessorTitular("Raul", "Andrade", 2, 1, "Android")
-    val professorAdjunto1 = ProfessorAdjunto("Letícia", "Duarte", 2, 2, 1)
-    val aluno1 = Aluno("Lucas", "Evaldo", 1)
-    val curso1 = Curso("Coders Mobile 2020", 1, professorTitular1, professorAdjunto1, 40)
+import java.util.*
 
-    curso1.addAluno(aluno1)
-    println(curso1.toString())
+fun main() {
+    var data = Date()
+
+    val sistema = DigitalHouseManager()
+
+    sistema.registrarCurso("Coders Mobile 2020", 1, 30)
+    sistema.registrarCurso("Coders Java 2020", 2, 30)
+    sistema.excluirCurso(1)
+    println(sistema.listaCursos)
 }
