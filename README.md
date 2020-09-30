@@ -1,4 +1,4 @@
-# Desafio1 - Módulo
+# Desafio1 - Módulo de Kotlin
 
 ### Diagrama do primeiro desafio com conceitos de POO e Kotlin do curso Santander Coders Mobile 2020.
 
