@@ -1,7 +1,10 @@
 package dh
 
-class ProfessorTitular(nome: String, sobrenome: String, tempoDeCasa: Int, codigo: Int, var especialidade: String) : Professor(nome, sobrenome, tempoDeCasa, codigo) {
+class ProfessorTitular(nome: String, sobrenome: String, codigo: Int, var especialidade: String) : Professor(nome, sobrenome, codigo) {
     override fun toString(): String {
-        return super.toString() + "Sua especialidade é ${this.especialidade}."
+        return "{Nome: ${this.nome} ${this.sobrenome}, " +
+                "Tempo de Casa: ${this.tempoDeCasa}, " +
+                "Código: ${this.codigo}, " +
+                "Especialidade: ${this.especialidade}}"
     }
 }

@@ -1,9 +1,24 @@
 package dh
 
 class Curso(var nome: String, var codigo: Int, var qtdMaxAlunos: Int) {
-    // lateinit var professorTitular: ProfessorTitular
-    // lateinit var professorAdjunto: ProfessorAdjunto
-    private val alunosMatriculados = mutableListOf<Aluno>()
+    var professorTitular: ProfessorTitular? = null
+    var professorAdjunto: ProfessorAdjunto? = null
+    val alunosMatriculados = mutableListOf<Aluno>()
+
+    override fun equals(other: Any?): Boolean {
+        return other == this.codigo
+    }
+
+    override fun toString(): String {
+        return "---------------------------------------\n" +
+                "Curso ${this.nome} \n " +
+                "-Código: ${this.codigo} \n " +
+                "-Professor(a) Titular: ${this.professorTitular.toString()} \n " +
+                "-Professor(a) Adjunto: ${this.professorAdjunto.toString()} \n " +
+                "-Quantidade máxima de alunos: ${this.qtdMaxAlunos} \n " +
+                "-Alunos Matriculados: ${this.alunosMatriculados}" +
+                "\n---------------------------------------\n"
+    }
 
     fun adicionarUmAluno(umAluno: Aluno): Boolean {
         var contadorAlunos = 0
@@ -22,17 +37,4 @@ class Curso(var nome: String, var codigo: Int, var qtdMaxAlunos: Int) {
     fun excluirAluno(umAluno: Aluno) {
         this.alunosMatriculados.remove(umAluno)
     }
-
-    override fun equals(other: Any?): Boolean {
-        return other == this.codigo
-    }
-
-//    override fun toString(): String {
-//        return "Curso ${this.nome} \n " +
-//                "-Código: ${this.codigo} \n " +
-//                "-Professor(a) Titular: ${this.professorTitular.toString()} \n " +
-//                "-Professor(a) Adjunto: ${this.professorAdjunto.toString()} \n " +
-//                "-Quantidade máxima de alunos: ${this.qtdMaxAlunos} \n " +
-//                "-Alunos Matriculados: ${this.alunosMatriculados}"
-//    }
 }
