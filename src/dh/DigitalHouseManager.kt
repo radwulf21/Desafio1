@@ -150,4 +150,19 @@ class DigitalHouseManager {
 
         println("Professores alocados no curso ${cursoRequerido?.nome}!")
     }
+
+    // --------------------------------------------------------------
+
+    fun consultarCurso(codigoAluno: Int) {
+        for (i in 0 until this.listaCursos.size) {
+            for (j in 0 until this.listaCursos[i].alunosMatriculados.size) {
+                if (this.listaCursos[i].alunosMatriculados[j].equals(codigoAluno)) {
+                    println("Você está matriculado no curso ${this.listaCursos[i].nome}.")
+                    return
+                }
+            }
+        }
+        
+        println("Não encontramos o seu código")
+    }
 }
